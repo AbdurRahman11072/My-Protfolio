@@ -181,7 +181,7 @@ export default async function ProjectsPage({
                 No projects found.
               </div>
             ) : (
-              projects.map(proj => (
+              projects.map((proj: any) => (
                 <Card key={proj.id} className="bg-[#111111] border-white/5 p-6 rounded-2xl flex flex-col gap-4">
                   <div className="flex justify-between items-start">
                     <div>
@@ -214,7 +214,7 @@ export default async function ProjectsPage({
                   </div>
                   <p className="text-gray-300 text-sm">{proj.description}</p>
                   <div className="flex flex-wrap gap-2 mt-2">
-                    {proj.tags.split(',').map(tag => (
+                    {proj.tags.split(',').map((tag: string) => (
                       <span key={tag} className="text-xs bg-white/5 px-2 py-1 rounded">{tag.trim()}</span>
                     ))}
                   </div>

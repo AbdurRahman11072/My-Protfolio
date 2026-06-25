@@ -91,7 +91,7 @@ export default async function ExperiencePage({
                 No experience entries found.
               </div>
             ) : (
-              experiences.map(exp => (
+              experiences.map((exp: any) => (
                 <Card key={exp.id} className="bg-[#111111] border-white/5 p-6 rounded-2xl flex justify-between items-start">
                   <div>
                     <h3 className="text-xl font-bold text-white">{exp.title}</h3>

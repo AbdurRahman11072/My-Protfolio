@@ -109,7 +109,7 @@ export default async function SkillsPage({
                     <td colSpan={4} className="p-8 text-center text-gray-500">No skills found.</td>
                   </tr>
                 ) : (
-                  skills.map(skill => (
+                  skills.map((skill: any) => (
                     <tr key={skill.id} className="hover:bg-white/5 transition-colors">
                       <td className="p-4 text-sm text-gray-300 font-medium">{skill.name}</td>
                       <td className="p-4 text-sm text-gray-400">{skill.category.name}</td>
@@ -155,7 +155,7 @@ export default async function SkillsPage({
                 <label className="block text-sm font-medium text-gray-400 mb-1">Category</label>
                 <input required defaultValue={skillToEdit?.category?.name} list="categories" type="text" name="categoryName" className="w-full bg-black border border-white/10 rounded-lg p-2 text-white outline-none focus:border-white/30" placeholder="e.g. Frontend" />
                 <datalist id="categories">
-                  {categories.map(c => <option key={c.id} value={c.name} />)}
+                  {categories.map((c: any) => <option key={c.id} value={c.name} />)}
                 </datalist>
               </div>
               <div>

@@ -46,7 +46,7 @@ export default async function MessagesPage() {
                 <td colSpan={7} className="p-8 text-center text-gray-500">No messages found.</td>
               </tr>
             ) : (
-              messages.map(msg => (
+              messages.map((msg: any) => (
                 <tr key={msg.id} className="hover:bg-white/5 transition-colors">
                   <td className="p-4 text-sm text-gray-300">{new Date(msg.createdAt).toLocaleDateString()}</td>
                   <td className="p-4 text-sm text-gray-300">{msg.name}</td>

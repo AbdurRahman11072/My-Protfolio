@@ -38,13 +38,13 @@ export default async function ProjectDetailsPage({ params }: { params: Promise<{
   // Helpers to parse markdown-like lists (one per line)
   const parseList = (text?: string | null) => {
     if (!text) return [];
-    return text.split("\n").map(t => t.trim().replace(/^-\s*/, "")).filter(t => t.length > 0);
+    return text.split("\n").map((t: string) => t.trim().replace(/^-\s*/, "")).filter((t: string) => t.length > 0);
   };
 
   const features = parseList(detail?.coreFeatures);
   const breakthroughs = parseList(detail?.breakthroughs);
   const roadmap = parseList(detail?.roadmap);
-  const tags = project.tags ? project.tags.split(",").map(t => t.trim()) : [];
+  const tags = project.tags ? project.tags.split(",").map((t: string) => t.trim()) : [];
 
   const getYoutubeEmbedUrl = (url?: string | null) => {
     if (!url) return null;

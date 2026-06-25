@@ -167,7 +167,7 @@ export default async function ProjectsPage({
     include: { detail: true }
   });
 
-  const projectToEdit = editId ? projects.find(p => p.id === editId) : null;
+  const projectToEdit = editId ? projects.find((p: any) => p.id === editId) : null;
 
   return (
     <div className="text-white">

@@ -85,7 +85,7 @@ export default async function SkillsPage({
   });
   const categories = await prisma.skillCategory.findMany();
 
-  const skillToEdit = editId ? skills.find(s => s.id === editId) : null;
+  const skillToEdit = editId ? skills.find((s: any) => s.id === editId) : null;
 
   return (
     <div className="text-white">

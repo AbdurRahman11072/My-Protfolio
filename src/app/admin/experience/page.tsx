@@ -77,7 +77,7 @@ export default async function ExperiencePage({
     orderBy: { order: 'asc' }
   });
 
-  const experienceToEdit = editId ? experiences.find(e => e.id === editId) : null;
+  const experienceToEdit = editId ? experiences.find((e: any) => e.id === editId) : null;
 
   return (
     <div className="text-white">

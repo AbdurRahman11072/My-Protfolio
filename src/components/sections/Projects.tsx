@@ -52,9 +52,9 @@ export function Projects({ projects }: { projects: ProjectWithDetail[] }) {
         </div>
 
         <div className="flex flex-col gap-32 mb-16">
-          {projects.map((project, idx) => {
+          {projects.map((project: any, idx: number) => {
             const tags = project.tags
-              ? project.tags.split(",").map((t) => t.trim())
+              ? project.tags.split(",").map((t: string) => t.trim())
               : [];
             const isEven = idx % 2 === 0;
 
@@ -111,7 +111,7 @@ export function Projects({ projects }: { projects: ProjectWithDetail[] }) {
                   </p>
 
                   <div className="flex flex-wrap gap-x-8 gap-y-4 mb-12">
-                    {tags.map((tag, i) => (
+                    {tags.map((tag: string, i: number) => (
                       <span
                         key={i}
                         className="text-[10px] md:text-xs text-gray-500 font-bold uppercase tracking-[0.2em]"

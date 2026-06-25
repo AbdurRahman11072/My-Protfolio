@@ -27,7 +27,7 @@ export function CareerObjective({ objective }: { objective: any }) {
 
   const highlightText = (text: string) => {
     const parts = text.split(/(\*[^*]+\*)/g);
-    return parts.map((part, i) => {
+    return parts.map((part: string, i: number) => {
       if (part.startsWith("*") && part.endsWith("*")) {
         return <span key={i} className="text-primary font-medium">{part.slice(1, -1)}</span>;
       }
@@ -51,7 +51,7 @@ export function CareerObjective({ objective }: { objective: any }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {parsedStats.map((stat, i) => {
+          {parsedStats.map((stat: any, i: number) => {
             // @ts-ignore
             const Icon = LucideIcons[stat.icon] || LucideIcons.HelpCircle;
             return (
@@ -109,7 +109,7 @@ export function CareerObjective({ objective }: { objective: any }) {
               <div>
                 <h3 className="text-xl font-bold text-white mb-6">Currently Learning</h3>
                 <div className="flex flex-col gap-4">
-                  {["Docker", "Go Lang"].map((tech) => (
+                  {["Docker", "Go Lang"].map((tech: string) => (
                     <Card key={tech} className="bg-black/50 border-white/5 p-5 rounded-xl flex items-center gap-4">
                       <div className="w-10 h-10 rounded-xl bg-[#1a1a1a] border border-white/10 flex items-center justify-center shrink-0">
                         <span className="text-primary text-lg font-bold">{tech[0]}</span>

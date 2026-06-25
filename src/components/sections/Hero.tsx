@@ -104,7 +104,7 @@ export function Hero({ data }: { data: HeroSection | null }) {
                 <>
                   <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent" />
                   <div className="flex items-center justify-center h-full text-zinc-700 font-medium text-lg">
-                    {data.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase()}
+                    {data.name.split(' ').map((n: string) => n[0]).join('').substring(0, 2).toUpperCase()}
                   </div>
                 </>
               )}

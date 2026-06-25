@@ -122,7 +122,7 @@ export default async function ObjectiveAdminPage() {
             <p className="text-xs text-gray-500 mb-4">Use Lucide React icon names exactly (e.g. GraduationCap, Code2, TrendingUp, Globe, Users, Target, Rocket)</p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[0, 1, 2, 3].map((idx) => (
+              {[0, 1, 2, 3].map((idx: number) => (
                 <div key={idx} className="p-4 border border-white/10 rounded-xl bg-black space-y-3">
                   <h4 className="text-sm font-bold text-gray-300">Stat Card {idx + 1}</h4>
                   <div>

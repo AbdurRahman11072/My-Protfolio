@@ -122,7 +122,7 @@ export default async function ProjectDetailsPage({ params }: { params: Promise<{
               <div className="space-y-8">
                 <h2 className="text-3xl font-bold tracking-tight">Architectural Features</h2>
                 <div className="grid sm:grid-cols-2 gap-4">
-                  {features.map((feature, idx) => (
+                  {features.map((feature: string, idx: number) => (
                     <div key={idx} className="flex items-start gap-4 p-5 rounded-xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
                       <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                       <span className="text-sm text-gray-300 leading-relaxed font-medium">{feature}</span>
@@ -137,7 +137,7 @@ export default async function ProjectDetailsPage({ params }: { params: Promise<{
               <div className="space-y-8">
                 <h2 className="text-3xl font-bold tracking-tight">Critical Break-throughs</h2>
                 <div className="space-y-4">
-                  {breakthroughs.map((bt, idx) => (
+                  {breakthroughs.map((bt: string, idx: number) => (
                     <div key={idx} className="flex items-start gap-4 p-5 rounded-xl border border-orange-500/10 bg-orange-500/5">
                       <AlertCircle className="w-5 h-5 text-orange-500 shrink-0 mt-0.5" />
                       <span className="text-sm text-gray-300 leading-relaxed font-medium">{bt}</span>
@@ -155,7 +155,7 @@ export default async function ProjectDetailsPage({ params }: { params: Promise<{
                   <div className="h-[1px] flex-1 bg-white/10"></div>
                 </div>
                 <div className="space-y-3">
-                  {roadmap.map((item, idx) => (
+                  {roadmap.map((item: string, idx: number) => (
                     <div key={idx} className="flex items-center gap-4 p-4 rounded-xl border border-blue-500/10 bg-blue-500/5">
                       <Circle className="w-3 h-3 text-blue-500 fill-blue-500 shrink-0" />
                       <span className="text-sm text-gray-300 font-medium">{item}</span>
@@ -227,7 +227,7 @@ export default async function ProjectDetailsPage({ params }: { params: Promise<{
               <div className="p-6 rounded-2xl border border-white/5 bg-[#111] space-y-5">
                 <h3 className="text-xs font-bold text-gray-500 uppercase tracking-widest">Ecosystem</h3>
                 <div className="flex flex-wrap gap-2">
-                  {tags.map(tag => (
+                  {tags.map((tag: string) => (
                     <span key={tag} className="px-3 py-1.5 rounded-md border border-white/10 bg-black text-[10px] text-gray-300 font-bold uppercase tracking-widest">
                       {tag}
                     </span>

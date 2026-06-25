@@ -58,7 +58,7 @@ export function Experience() {
         </div>
 
         <div className="relative border-l border-white/10 ml-4 md:ml-8 space-y-12">
-          {experiences.map((exp, idx) => (
+          {experiences.map((exp: any, idx: number) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, x: -20 }}
@@ -97,7 +97,7 @@ export function Experience() {
                 </div>
 
                 <div className="space-y-3">
-                  {exp.responsibilities.map((task, i) => (
+                  {exp.responsibilities.map((task: string, i: number) => (
                     <div key={i} className="flex gap-3 text-gray-400">
                       <CheckCircle2 className="w-5 h-5 text-primary/70 shrink-0 mt-0.5" />
                       <span className="leading-relaxed">{task}</span>

@@ -47,7 +47,7 @@ export function Skills({ categories }: { categories: SkillCategoryData[] }) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {categories.map((category, idx) => {
+          {categories.map((category: any, idx: number) => {
             const Icon = getCategoryIcon(category.name);
             return (
             <motion.div
@@ -71,7 +71,7 @@ export function Skills({ categories }: { categories: SkillCategoryData[] }) {
                 </div>
 
                 <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill) => (
+                  {category.skills.map((skill: any) => (
                     <div
                       key={skill.id}
                       className="px-3 py-1.5 rounded-md bg-black/40 border border-white/5 text-sm text-gray-300 hover:border-primary/30 hover:text-white transition-colors"
